@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideias para dates</title>
+    <title><3</title>
     <style>
         /* Basic styling for the page */
         body {
@@ -41,21 +41,22 @@
     </style>
 </head>
 <body>
-    <div class="sentence" 
+    <div class="sentence" id="sentenceDisplay">Click the button to see a random sentence!</div>
     <button class="btn" onclick="displayRandomSentence()">Clica em mim (;</button>
 
     <script>
         const sentences = [
-            "FICAR EM CASAAAAA!!!!"
-"O clássico passeio no nosso parque que não pode faltar.",
-"Aquário/ Oceanário.",
-"Vamos conhecer um café novo no Porto.",
-"Date night num restaurante à escolha.",
-"Pintar canecas.",
-"Ir à praia.",
-"Ver o pôr-do-sol com uma música boa de fundo.",
-"Cinema."
-   ];
+                              "FICAR EM CASAAAAA!!!!" ,
+"O clássico passeio no nosso parque que não pode faltar." ,
+"Aquário/ Oceanário." ,
+"Vamos conhecer um café novo no Porto." ,
+"Date night num restaurante à escolha." ,
+"Pintar canecas." ,
+"Ir à praia." ,
+"Ver o pôr-do-sol com uma música boa de fundo." , 
+"Cinema." 
+
+        ];
 
         function getRandomSentence() {
             const randomIndex = Math.floor(Math.random() * sentences.length);
@@ -69,5 +70,12 @@
         // Display an initial random sentence when the page loads
         window.onload = displayRandomSentence;
     </script>
+
+       <!-- Button HTML -->
+<div style="text-align: center; margin: 20px 0;">
+    <a href="index.html" style="display: inline-block; padding: 7px 15px; font-size: 18px; color: white; background-color: #f12929; border: none; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;">
+        Página Inicial
+            </a>
+</div>
 </body>
 </html>
