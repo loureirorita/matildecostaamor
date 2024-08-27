@@ -82,7 +82,37 @@
         updateTime(); // initial call to display time immediately
     </script>
 
+    </script>
 
+    <!-- Counter for months and days since april 4th 2024 -->
+    <div id="result"></div>
+
+    <script>
+        function calculateMonthsAndDays(fromDate) {
+            const now = new Date();
+            const pastDate = new Date(fromDate);
+
+            // Calculate the difference in months
+            let months = (now.getFullYear() - pastDate.getFullYear()) * 12;
+            months -= pastDate.getMonth();
+            months += now.getMonth();
+
+            // Calculate the difference in days
+            let days = now.getDate() - pastDate.getDate();
+            if (days < 0) {
+                months--; // Reduce one month
+                const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += previousMonth.getDate(); // Add days from the previous month
+            }
+
+            return { months, days };
+        }
+
+        const { months, days } = calculateMonthsAndDays('2024-04-04');
+        document.getElementById('result').textContent = `Estamos juntas há ${months} meses e ${days} dias, desde 4 de Abril de 2024.`;
+    </script>
+
+    
      <!-- Counter for months and days until next April 4th -->
     <div class="counter" id="daysCounter">Loading...</div>
 
@@ -118,35 +148,5 @@
         }
 
         displayCountdown();
-    </script>
-
-    <!-- Counter for months and days since april 4th 2024 -->
-    <div id="result"></div>
-
-    <script>
-        function calculateMonthsAndDays(fromDate) {
-            const now = new Date();
-            const pastDate = new Date(fromDate);
-
-            // Calculate the difference in months
-            let months = (now.getFullYear() - pastDate.getFullYear()) * 12;
-            months -= pastDate.getMonth();
-            months += now.getMonth();
-
-            // Calculate the difference in days
-            let days = now.getDate() - pastDate.getDate();
-            if (days < 0) {
-                months--; // Reduce one month
-                const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
-                days += previousMonth.getDate(); // Add days from the previous month
-            }
-
-            return { months, days };
-        }
-
-        const { months, days } = calculateMonthsAndDays('2024-04-04');
-        document.getElementById('result').textContent = `Estamos juntas à ${months} meses e ${days} dias, desde 4 de Abril de 2024.`;
-    </script>
-
     </body>
 </html>
