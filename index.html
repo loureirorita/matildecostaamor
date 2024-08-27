@@ -112,5 +112,42 @@
         document.getElementById('result').textContent = `Estamos juntas há ${months} meses e ${days} dias.`;
     </script>
 
+    
+    <script>
+        function timeUntilNextApril4th() {
+            const today = new Date();
+            let nextApril4th = new Date(today.getFullYear(), 3, 4); // April 4th of this year (months are 0-indexed in JS)
+
+            // If today's date is after April 4th, calculate for the next year's April 4th
+            if (today > nextApril4th) {
+                nextApril4th = new Date(today.getFullYear() + 1, 3, 4);
+            }
+
+            let monthsLeft = nextApril4th.getMonth() - today.getMonth();
+            let daysLeft = nextApril4th.getDate() - today.getDate();
+
+            // Adjust the months and days if necessary
+            if (daysLeft < 0) {
+                monthsLeft--;
+                const lastDayOfPreviousMonth = new Date(nextApril4th.getFullYear(), nextApril4th.getMonth(), 0).getDate();
+                daysLeft += lastDayOfPreviousMonth;
+            }
+
+            if (monthsLeft < 0) {
+                monthsLeft += 12;
+            }
+
+            return { months: monthsLeft, days: daysLeft };
+        }
+4 de abril
+        function displayTimeCountdown() {
+            const timeLeft = timeUntilNextApril4th();
+            document.getElementById('timeCounter').innerText = 
+                `Faltam ${timeLeft.months} meses e ${timeLeft.days} dias até 4 de Abril. `;
+        }
+
+        displayTimeCountdown();
+    </script>
+
     </body>
 </html>
