@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datas Importantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datas Importantes</h1>
+    <p>
+       Algumas datas importantes da nossa relação:
+    </p>
+    <ul>
+        <li>10 de Novembro de 2023- Foi o dia em que começamos a falar</li>
+        <li>25 de Novembro de 2023 - Foi o dia em que tivemos o nosso primeiro date na praia da Aguda</li>
+        <li>9 de Dezembro de 2023 - Foi o dia em que demos o nosso primeiro beijinho </li>
+        <li>4 de Abril de 2024 - Foi o dia em que começamos a namorar</li>
+        <li>------ - Foi o dia em que te pedi em casamento</li>
+        <li>------ - Foi o dia do nosso casamento</li>
+        
+        <!-- Add more important dates as needed -->
+    </ul>
+</body>
+</html>
