@@ -52,7 +52,43 @@
       <!-- New button for Comidas Matilde -->
     <a href="comida-matilde.html" class="btn">Comidas Matilde</a>
 
-    
+
+     <!-- Counter for months and days until next April 4th -->
+    <div class="counter" id="daysCounter">Loading...</div>
+
+    <script>
+        function monthsAndDaysUntilNextApril4() {
+            const today = new Date();
+            let nextApril4 = new Date(today.getFullYear(), 3, 4); // Month is 0-indexed (3 = April)
+
+            // If today's date is past April 4th, calculate for the next year
+            if (today > nextApril4) {
+                nextApril4.setFullYear(nextApril4.getFullYear() + 1);
+            }
+
+            // Calculate months and days
+            const totalMonths = (nextApril4.getFullYear() - today.getFullYear()) * 12 + (nextApril4.getMonth() - today.getMonth());
+            const lastMonthEndDate = new Date(nextApril4.getFullYear(), nextApril4.getMonth(), 0).getDate();
+            const daysLeftInMonth = lastMonthEndDate - today.getDate() + nextApril4.getDate();
+            const daysLeft = Math.floor((nextApril4 - today) / (1000 * 60 * 60 * 24));
+            
+            // Adjust for the case when we are calculating the days in the same month
+            const remainingMonths = totalMonths;
+            const remainingDays = daysLeftInMonth % 30; // Approximate days left in the current month
+            
+            return {
+                months: remainingMonths,
+                days: remainingDays
+            };
+        }
+
+        function displayCountdown() {
+            const { months, days } = monthsAndDaysUntilNextApril4();
+            document.getElementById('daysCounter').innerText = `Meses e dias até ao dia 4 de Abril: ${months} meses e ${days} dias`;
+        }
+
+        displayCountdown();
+    </script>
 
     </body>
 </html>
