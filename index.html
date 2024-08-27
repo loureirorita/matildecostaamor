@@ -48,11 +48,10 @@
       <!-- New button for Comidas Matilde -->
     <a href="comida-matilde.html" class="btn">Comidas Matilde</a>
 
-    <!-- Counter for days until next April 4th -->
+<!-- Counter for months and days until next April 4th -->
     <div class="counter" id="daysCounter">Loading...</div>
-
     <script>
-        function daysUntilNextApril4() {
+        function monthsAndDaysUntilNextApril4() {
             const today = new Date();
             let nextApril4 = new Date(today.getFullYear(), 3, 4); // Month is 0-indexed (3 = April)
 
@@ -61,14 +60,27 @@
                 nextApril4.setFullYear(nextApril4.getFullYear() + 1);
             }
 
-            const oneDay = 24 * 60 * 60 * 1000; // Hours * Minutes * Seconds * Milliseconds
-            const daysLeft = Math.round((nextApril4 - today) / oneDay);
-
-            return daysLeft;
+            // Calculate months and days
+            const totalMonths = (nextApril4.getFullYear() - today.getFullYear()) * 12 + (nextApril4.getMonth() - today.getMonth());
+            const lastMonthEndDate = new Date(nextApril4.getFullYear(), nextApril4.getMonth(), 0).getDate();
+            const daysLeftInMonth = lastMonthEndDate - today.getDate() + nextApril4.getDate();
+            const daysLeft = Math.floor((nextApril4 - today) / (1000 * 60 * 60 * 24));
+            
+            // Adjust for the case when we are calculating the days in the same month
+            const remainingMonths = totalMonths;
+            const remainingDays = daysLeftInMonth % 30; // Approximate days left in the current month
+            
+            return {
+                months: remainingMonths,
+                days: remainingDays
+            };
         }
 
-        // Display the number of days in the HTML element
-        document.getElementById('daysCounter').innerText = `Days until next April 4th: ${daysUntilNextApril4()}`;
+        function displayCountdown() {
+            const { months, days } = monthsAndDaysUntilNextApril4();
+            document.getElementById('daysCounter').innerText = `Dias e meses até ao próximo dia 4/: ${months} meses e ${days} dias`;
+        }
+
+        displayCountdown();
     </script>
-</body>
 </html>
