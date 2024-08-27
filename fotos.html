@@ -9,14 +9,26 @@
         .gallery {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 20px;
             justify-content: center;
             margin-top: 50px;
         }
 
-        .gallery img {
+        .gallery-item {
+            text-align: center;
             max-width: 300px;
+        }
+
+        .gallery img {
+            max-width: 100%;
             border-radius: 10px;
+        }
+
+        .caption {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
         }
 
         h1 {
@@ -27,11 +39,13 @@
     </style>
 </head>
 <body>
-    <h1>A Nossa Galeria de fotos </h1>
+    <h1>A Nossa Galeria de fotos</h1>
     <div class="gallery">
-        <img src="unnamed.jpg" alt="image 1">
-     
-        <!-- Add more images as needed -->
+        <div class="gallery-item">
+            <img src="unnamed.jpg" alt="Image 1">
+            <div class="caption">Dia do baile- 12 de Junho de 2024</div>
+        </div>
+        <!-- Add more images and captions as needed -->
     </div>
 </body>
 </html>
