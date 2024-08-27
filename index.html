@@ -53,6 +53,56 @@
     <!-- Button that links to the datas page -->
     <a href="datas-importantes.html" class="btn">Datas Importantes</a>
 
+    <!-- hora, dia, dia da semana -->
+    body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .time, .date, .day {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="time" id="time"></div>
+        <div class="date" id="date"></div>
+        <div class="day" id="day"></div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+
+            const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const dayOptions = { weekday: 'long' };
+
+            const time = now.toLocaleTimeString('en-US', timeOptions);
+            const date = now.toLocaleDateString('en-US', dateOptions);
+            const day = now.toLocaleDateString('en-US', dayOptions);
+
+            document.getElementById('time').textContent = time;
+            document.getElementById('date').textContent = date;
+            document.getElementById('day').textContent = day;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // initial call to display time immediately
+    </script>
+
 
      <!-- Counter for months and days until next April 4th -->
     <div class="counter" id="daysCounter">Loading...</div>
