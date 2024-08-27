@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><3</title>
+    <title>Random Sentence</title>
     <style>
         /* Basic styling for the page */
         body {
@@ -14,7 +14,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f8f3e9;
+            background-color: #f4f4f4;
         }
 
         .sentence {
@@ -28,7 +28,7 @@
             padding: 10px 20px;
             font-size: 18px;
             color: white;
-            background-color: #f11f1f;
+            background-color: #f12929;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -36,19 +36,19 @@
         }
 
         .btn:hover {
-            background-color: #ffe400;
+            background-color: #f5d044;
         }
     </style>
 </head>
 <body>
-  
-    <button class="btn" onclick="displayRandomSentence()">clica em mim (;</button>
+    <div class="sentence" id="sentenceDisplay">Click the button to see a random sentence!</div>
+    <button class="btn" onclick="displayRandomSentence()">New Sentence</button>
 
     <script>
         const sentences = [
-            "UAUUUUUUUUUUUUUUUUUUUUUUU",
+             "UAUUUUUUUUUUUUUUUUUUUUUUU",
             "Caso não te tenha dito hoje, tu és a minha pessoa e a minha pessoa favorita.",
-            "Eu amo-te, com todo o meu coraçãozinho",
+            "Eu amo-te, com todo o meu coraçãozinho.",
             "O teu daily reminder para pores oléo nas pontas.",
             "És uma menina muito especial e muito especial para mim.",
             "Nunca deixes de sorrir, tens o sorriso mais lindo do mundo.",
@@ -56,8 +56,6 @@
             "Sou muito grata por tudo aquilo que fazes por mim, pelos mimos, pela atenção, pelas pequenas coisas, pelos presentes, por tudo. Obrigada, mesmo.",
             "Fazes-me sentir a menina menina mais única e especial do mundo.",
             "A vidinha é melhor contigo."
-            "Podia ouvir-te falar por horas e horas."
-        
         ];
 
         function getRandomSentence() {
