@@ -48,6 +48,34 @@
       <!-- New button for Comidas Matilde -->
     <a href="comida-matilde.html" class="btn">Comidas Matilde</a>
 
+ <!-- Counter for days until the 4th of next month -->
+    <div class="counter" id="daysCounter">Loading...</div>
+
+    <script>
+        function daysUntilNextMonth4() {
+            const today = new Date();
+            let nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 4); // 4th of the next month
+
+            // If today is past the 4th of this month, adjust to the next month's 4th
+            if (today.getDate() > 4) {
+                nextMonth = new Date(today.getFullYear(), today.getMonth() + 2, 4);
+            }
+
+            // Calculate the number of days between today and nextMonth
+            const oneDay = 24 * 60 * 60 * 1000; // Hours * Minutes * Seconds * Milliseconds
+            const daysLeft = Math.round((nextMonth - today) / oneDay);
+
+            return daysLeft;
+        }
+
+        function displayCountdown() {
+            const days = daysUntilNextMonth4();
+            document.getElementById('daysCounter').innerText = `Dias até ao nosso próximo mês: ${days} days`;
+        }
+
+        displayCountdown();
+    </script>
+    
 <!-- Counter for months and days until next April 4th -->
     <div class="counter" id="daysCounter">Loading...</div>
     <script>
