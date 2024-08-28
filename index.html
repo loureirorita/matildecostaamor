@@ -150,35 +150,7 @@
     </script>
 
  
-        /* Styling for the walking dog */
-        .dog {
-            position: absolute;
-            bottom: 20px; /* Fixed distance from the bottom */
-            left: -100px; /* Start off the screen on the left */
-            width: 100px; /* Adjust the size of the dog */
-            z-index: 100; /* Ensures the dog appears on top */
-        }
-
-        @keyframes walk {
-            0% { left: -100px; transform: scaleX(1); } /* Start off-screen left */
-            50% { left: calc(100% - 100px); transform: scaleX(1); } /* Move to the far right */
-            50.1% { transform: scaleX(-1); } /* Flip the dog to walk back */
-            100% { left: -100px; transform: scaleX(-1); } /* Move back to start */
-        }
-
-        .walking {
-            animation: walk 20s linear infinite; /* Walks forever at a slow pace */
-        }
-    </style>
-</head>
-<body>
-  <!-- Dog Image -->
-    <img src="dog.png" alt="Cute Dog" id="dog" class="dog">
-
-    <script>
-        // Add the 'walking' class to the dog image to start the animation
-        document.getElementById('dog').classList.add('walking');
-    </script>
+  
 
     </body>
 </html>
