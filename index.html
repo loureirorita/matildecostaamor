@@ -111,6 +111,99 @@
 </html>
 
 
+      <!-- hora, dia, dia da semana -->
+   
+    <div class="container">
+        <div class="time" id="time"></div>
+        <div class="date" id="date"></div>
+        <div class="day" id="day"></div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+
+            const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            const dayOptions = { weekday: 'long' };
+
+            const time = now.toLocaleTimeString('en-US', timeOptions);
+            const date = now.toLocaleDateString('en-US', dateOptions);
+            const day = now.toLocaleDateString('en-US', dayOptions);
+
+            document.getElementById('time').textContent = time;
+            document.getElementById('date').textContent = date;
+            document.getElementById('day').textContent = day;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime(); // initial call to display time immediately
+    </script>
+
+    </script>
+
+    <!-- Counter for months and days since april 4th 2024 -->
+    <div id="result"></div>
+
+    <script>
+        function calculateMonthsAndDays(fromDate) {
+            const now = new Date();
+            const pastDate = new Date(fromDate);
+
+            // Calculate the difference in months
+            let months = (now.getFullYear() - pastDate.getFullYear()) * 12;
+            months -= pastDate.getMonth();
+            months += now.getMonth();
+
+            // Calculate the difference in days
+            let days = now.getDate() - pastDate.getDate();
+            if (days < 0) {
+                months--; // Reduce one month
+                const previousMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += previousMonth.getDate(); // Add days from the previous month
+            }
+
+            return { months, days };
+        }
+
+        const { months, days } = calculateMonthsAndDays('2024-04-04');
+        document.getElementById('result').textContent = `Estamos juntas há ${months} meses e ${days} dias.`;
+    </script>
+
+    
+    <script>
+        function timeUntilNextApril4th() {
+            const today = new Date();
+            let nextApril4th = new Date(today.getFullYear(), 3, 4); // April 4th of this year (months are 0-indexed in JS)
+
+            // If today's date is after April 4th, calculate for the next year's April 4th
+            if (today > nextApril4th) {
+                nextApril4th = new Date(today.getFullYear() + 1, 3, 4);
+            }
+
+            let monthsLeft = nextApril4th.getMonth() - today.getMonth();
+            let daysLeft = nextApril4th.getDate() - today.getDate();
+
+            // Adjust the months and days if necessary
+            if (daysLeft < 0) {
+                monthsLeft--;
+                const lastDayOfPreviousMonth = new Date(nextApril4th.getFullYear(), nextApril4th.getMonth(), 0).getDate();
+                daysLeft += lastDayOfPreviousMonth;
+            }
+
+            if (monthsLeft < 0) {
+                monthsLeft += 12;
+            }
+
+            return { months: monthsLeft, days: daysLeft };
+        }
+4 de abril
+        function displayTimeCountdown() {
+            const timeLeft = timeUntilNextApril4th();
+            document.getElementById('timeCounter').innerText = 
+                `Faltam ${timeLeft.months} meses e ${timeLeft.days} dias até 4 de Abril. `;
+        }
+
         displayTimeCountdown();
     </script>
 
