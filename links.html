@@ -27,24 +27,19 @@
         .icon-link {
             text-decoration: none;
             color: #333;
-            font-size: 2em;
-            transition: color 0.3s;
+            transition: transform 0.3s; /* Smooth animation on hover */
         }
 
-        .icon-link:hover {
-            color: #1DB954; /* Spotify green for Spotify link */
+        .icon-link img {
+            width: 60px; /* Adjust the size of your icons */
+            height: auto;
+            transition: transform 0.3s;
         }
 
-        .icon-link.website:hover {
-            color: #0072ce; /* A typical web blue color for the website link */
-        }
-
-        .icon-link.email:hover {
-            color: #ea4335; /* Gmail red for email link */
+        .icon-link:hover img {
+            transform: scale(1.1); /* Slightly enlarge the icon on hover */
         }
     </style>
-    <!-- Include Font Awesome for icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <h1>Encontra-nos (;</h1>
@@ -52,19 +47,21 @@
     <div class="icons">
         <!-- Spotify Logo -->
         <a href="https://open.spotify.com/playlist/4D8XTp6xgUG6CTQiIUgtkO?si=c833281abd504a2a" class="icon-link" target="_blank">
-            <i class="fab fa-spotify"></i>
+            <img src="spotify-logo.png" alt="Spotify Logo">
         </a>
 
         <!-- Website Logo -->
         <a href="https://yourwebsite.com" class="icon-link website" target="_blank">
-            <i class="fas fa-globe"></i>
+            <img src="website-logo.png" alt="Website Logo">
         </a>
 
         <!-- Email Logo -->
-        <a href="mailto:matildeeritaparasempre@gmail.com.com" class="icon-link email">
-            <i class="fas fa-envelope"></i>
+        <a href="mailto:matildeeritaparasempre@gmail.com" class="icon-link email">
+            <img src="email-logo.png" alt="Email Logo">
         </a>
     </div>
 </body>
 </html>
 
+</body>
+</html>
