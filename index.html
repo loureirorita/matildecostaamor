@@ -5,39 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M+R</title>
     <style>
-        /* Basic styling for the button */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f0f4f8, #e6ebef);
+            color: #333;
+        }
+
+        h1 {
+            margin: 40px 0;
+            font-size: 3em;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 1.2em;
             color: white;
             background-color: #38a056;
             border: none;
-            border-radius: 5px;
-            text-align: center;
+            border-radius: 25px;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(56, 160, 86, 0.2);
         }
 
         .btn:hover {
             background-color: #5e4034;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(94, 64, 52, 0.3);
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .time, .date, .day {
+            font-size: 1.4em;
+            color: #444;
+            margin-top: 10px;
         }
 
         footer {
             margin-top: 50px;
-            font-size: 16px;
+            padding: 20px;
+            font-size: 1.1em;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #result, #timeCounter {
+            font-size: 1.3em;
+            color: #007BFF;
+            margin: 15px 0;
         }
     </style>
 </head>
 <body>
     <h1>OLÁ MEU AMOR!</h1>
+
     <!-- Buttons linking to various pages -->
     <a href="fotos.html" class="btn">Galeria</a>
     <a href="afirmações.html" class="btn">A não esquecer</a>
