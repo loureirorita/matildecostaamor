@@ -47,11 +47,23 @@
             width: 50%;
         }
 
-        .timeline-item.left {
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 15px;  /* Tamanho menor das bolinhas */
+            height: 15px; /* Tamanho menor das bolinhas */
+            background-color: #f12929; /* Cor vermelha */
+            border-radius: 50%;
+            top: 15px;
+            left: calc(50% - 7.5px); /* Centraliza as bolinhas horizontalmente */
+            z-index: 1;
+        }
+
+        .left {
             left: 0;
         }
 
-        .timeline-item.right {
+        .right {
             left: 50%;
             text-align: right;
         }
@@ -89,13 +101,13 @@
                 padding-right: 25px;
             }
 
-            .timeline-item.left {
-                left: 0%;
+            .timeline-item.left::after {
+                left: 60px;
             }
 
-            .timeline-item.right {
-                left: 0%;
-                text-align: left;
+            .timeline-item.right::after {
+                left: auto;
+                right: 60px;
             }
         }
     </style>
@@ -117,8 +129,7 @@
         </div>
         <div class="timeline-item left">
             <div class="content">
-                <h3>
-9 de Dezembro de 2023</h3>
+                <h3>9 de Dezembro de 2023</h3>
                 <p>Dia em que demos o nosso primeiro beijinho</p>
             </div>
         </div>
