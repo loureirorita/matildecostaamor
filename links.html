@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .icon-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 2em;
+            transition: color 0.3s;
+        }
+
+        .icon-link:hover {
+            color: #1DB954; /* Spotify green for Spotify link */
+        }
+
+        .icon-link.website:hover {
+            color: #0072ce; /* A typical web blue color for the website link */
+        }
+
+        .icon-link.email:hover {
+            color: #ea4335; /* Gmail red for email link */
+        }
+    </style>
+    <!-- Include Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Connect with Us</h1>
+
+    <div class="icons">
+        <!-- Spotify Logo -->
+        <a href="https://open.spotify.com/playlist/YOUR_PLAYLIST_ID" class="icon-link" target="_blank">
+            <i class="fab fa-spotify"></i>
+        </a>
+
+        <!-- Website Logo -->
+        <a href="https://yourwebsite.com" class="icon-link website" target="_blank">
+            <i class="fas fa-globe"></i>
+        </a>
+
+        <!-- Email Logo -->
+        <a href="mailto:youremail@example.com" class="icon-link email">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+</body>
+</html>
 
