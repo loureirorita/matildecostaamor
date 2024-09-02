@@ -15,6 +15,8 @@
             height: 100vh;
             margin: 0;
             background-color: #f9f1d8;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .sentence {
@@ -22,9 +24,13 @@
             margin-bottom: 20px;
             text-align: center;
             max-width: 80%;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
         }
 
-        .btn {
+        .btn, .home-link {
             padding: 10px 20px;
             font-size: 18px;
             color: white;
@@ -32,34 +38,56 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .btn:hover {
+        .btn:hover, .home-link:hover {
             background-color: #f5d044;
+            transform: scale(1.05);
         }
 
-        /* Button styling for home page link */
         .home-link {
             display: inline-block;
             padding: 7px 15px;
             font-size: 18px;
             color: white;
             background-color: #f12929;
-            border: none;
-            border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
         }
 
-        .home-link:hover {
-            background-color: #f5d044;
+        /* Dark mode styling */
+        .dark-mode body {
+            background-color: #333;
+            color: #f9f1d8;
+        }
+
+        .dark-mode .sentence {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Button to toggle dark mode */
+        .dark-mode-toggle {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #f9f1d8;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: #555;
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
     <div class="sentence" id="sentenceDisplay">Click the button to see a random sentence!</div>
     <button class="btn" onclick="displayRandomSentence()">Clica em mim (;</button>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Modo Escuro</button>
 
     <script>
         const sentences = [
@@ -87,7 +115,16 @@
         }
 
         function displayRandomSentence() {
-            document.getElementById('sentenceDisplay').innerText = getRandomSentence();
+            const sentenceDisplay = document.getElementById('sentenceDisplay');
+            sentenceDisplay.style.opacity = 0; // Fade out
+            setTimeout(() => {
+                sentenceDisplay.innerText = getRandomSentence();
+                sentenceDisplay.style.opacity = 1; // Fade in
+            }, 300); // Tempo para o fade out
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
         }
 
         // Display an initial random sentence when the page loads
