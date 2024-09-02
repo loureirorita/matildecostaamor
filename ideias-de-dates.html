@@ -14,7 +14,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f9f1d8;
+            background-color: #bcdfc6; /* Cor de fundo da página */
             color: #333;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
@@ -36,7 +36,7 @@
             padding: 10px 20px;
             font-size: 18px;
             color: white;
-            background-color: #f12929; /* Cor de fundo do botão */
+            background-color: #38a056; /* Cor de fundo do botão */
             border: none;
             border-radius: 50px; /* Botão arredondado */
             cursor: pointer;
@@ -49,7 +49,7 @@
         }
 
         .btn:hover {
-            background-color: #e02b2b; /* Cor ao passar o mouse */
+            background-color: #2f8e4c; /* Cor ao passar o mouse */
             transform: scale(1.05);
         }
 
@@ -59,7 +59,7 @@
             padding: 10px 20px;
             font-size: 18px;
             color: white;
-            background-color: #f12929; /* Cor de fundo do botão */
+            background-color: #38a056; /* Cor de fundo do botão */
             border: none;
             border-radius: 50px; /* Botão arredondado */
             text-decoration: none;
@@ -67,13 +67,19 @@
         }
 
         .home-link:hover {
-            background-color: #e02b2b; /* Cor ao passar o mouse */
+            background-color: #2f8e4c; /* Cor ao passar o mouse */
             transform: scale(1.05);
+        }
+
+        h1 {
+            color: #2b623b; /* Cor do título */
+            font-size: 2.5em;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <div class="sentence" id="sentenceDisplay">Clica no botão para ver uma frase aleatória!</div>
+    <div class="sentence" id="sentenceDisplay">Clique no botão para ver uma frase aleatória!</div>
     <button class="btn" onclick="displayRandomSentence()">Clique em mim (;</button>
 
     <!-- Button linking back to the home page -->
@@ -120,3 +126,4 @@
     </script>
 </body>
 </html>
+
