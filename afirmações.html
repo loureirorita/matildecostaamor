@@ -30,12 +30,47 @@
             border-radius: 10px;
         }
 
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #f12929;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e02b2b;
+        }
+
+        /* Button styling for home page link */
+        .home-link {
+            display: inline-block;
+            padding: 7px 15px;
+            font-size: 18px;
+            color: white;
+            background-color: #f12929;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: #e02b2b;
+        }
     </style>
 </head>
 <body>
     <div class="sentence" id="sentenceDisplay">Click the button to see a random sentence!</div>
     <button class="btn" onclick="displayRandomSentence()">Clica em mim (;</button>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Modo Escuro</button>
+
+    <!-- Button linking back to the home page -->
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="home-link">Página Inicial</a>
+    </div>
 
     <script>
         const sentences = [
@@ -70,17 +105,9 @@
             }, 300); // Tempo para o fade out
         }
 
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-
         // Display an initial random sentence when the page loads
         window.onload = displayRandomSentence;
     </script>
-
-    <!-- Button linking back to the home page -->
-    <div style="text-align: center; margin: 20px 0;">
-        <a href="index.html" class="home-link">Página Inicial</a>
-    </div>
 </body>
 </html>
+
