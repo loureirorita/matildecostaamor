@@ -32,40 +32,22 @@
             margin-bottom: 15px;
         }
 
-        form {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            background-color: #f9f1d8;
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 10px;
+        .btn {
             display: block;
-        }
-
-        textarea {
             width: 100%;
             padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background-color: #f12929;
+            font-size: 18px;
             color: white;
-            padding: 10px 20px;
+            background-color: #f12929;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-align: center;
+            text-decoration: none;
         }
 
-        button:hover {
+        .btn:hover {
             background-color: #d11a1a;
         }
 
@@ -78,6 +60,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            text-align: center;
         }
 
         .home-link:hover {
@@ -86,54 +69,15 @@
     </style>
 </head>
 <body>
-    <h1>Check In Semanal</h1>
-    <ol>
-        <li>Olá amor, se estás a abrir isto é provável que seja sexta-feira, por isso, responde quando puderes, por favor (:</li> 
-        <li>Há algo que eu ande a fazer ou que eu tenha feito que te deixe ou tenha deixado triste, chateada ou incomodada?</li>
-        <li>Há algo que gostarias que fizesse, dissesse, mencionasse mais ou começasse a fazer ou dizer e que não faço?</li>
-        <li>Algo que valorizes que eu já faça (a longo prazo ou na semana que passou)?</li>
-        <li>Existe algo a trabalhar na nossa relação? (Aspetos negativos ou menos bons)</li>
-        <li>Algo que valorizes na nossa relação ultimamente?</li>
-        <li>“Resumindo”, sentes-te ouvida, respeitada, valorizada, amada, bem tratada e sentes que os teus sentimentos são acolhidos, a todos os níveis?</li>
-    </ol>
-
-    <h2>Responda ao Check In</h2>
-    <form id="checkInForm">
-        <label for="response1">1. Há algo que eu ande a fazer ou que eu tenha feito que te deixe ou tenha deixado triste, chateada ou incomodada?</label>
-        <textarea id="response1" name="response1" rows="4" cols="50"></textarea>
-
-        <label for="response2">2. Há algo que gostarias que fizesse, dissesse, mencionasse mais ou começasse a fazer ou dizer e que não faço?</label>
-        <textarea id="response2" name="response2" rows="4" cols="50"></textarea>
-
-        <label for="response3">3. Algo que valorizes que eu já faça (a longo prazo ou na semana que passou)?</label>
-        <textarea id="response3" name="response3" rows="4" cols="50"></textarea>
-
-        <label for="response4">4. Existe algo a trabalhar na nossa relação? (Aspetos negativos ou menos bons)</label>
-        <textarea id="response4" name="response4" rows="4" cols="50"></textarea>
-
-        <label for="response5">5. Algo que valorizes na nossa relação ultimamente?</label>
-        <textarea id="response5" name="response5" rows="4" cols="50"></textarea>
-
-        <label for="response6">6. “Resumindo”, sentes-te ouvida, respeitada, valorizada, amada, bem tratada e sentes que os teus sentimentos são acolhidos, a todos os níveis?</label>
-        <textarea id="response6" name="response6" rows="4" cols="50"></textarea>
-
-        <button type="submit">Enviar Respostas</button>
-    </form>
-
-    <h2>Resumo da Semana</h2>
-    <textarea id="weeklySummary" name="weeklySummary" rows="4" cols="50" placeholder="Escreva um resumo da semana aqui."></textarea>
-
-    <!-- Botão para voltar à Página Inicial -->
     <div style="text-align: center; margin: 20px 0;">
         <a href="index.html" class="home-link">Página Inicial</a>
     </div>
 
-    <script>
-        document.getElementById('checkInForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Obrigado por responder! Suas respostas foram registradas.');
-            // Aqui você pode adicionar código para enviar os dados para um servidor ou armazená-los localmente.
-        });
-    </script>
+    <h1>Check In Semanal</h1>
+
+    <p>Olá amor, para o check-in semanal, por favor preenche o formulário no link abaixo:</p>
+    <a href="https://forms.gle/mbcy4G3ir7VUKUpw6" class="btn" target="_blank">Check In</a>
+
 </body>
 </html>
+
