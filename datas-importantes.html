@@ -6,8 +6,9 @@
     <title>As nossas datas</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f1d8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #bcdfc6; /* Background color */
+            color: #2b623b; /* Text color */
             margin: 0;
             padding: 20px;
             display: flex;
@@ -20,7 +21,7 @@
             text-align: center;
             margin-bottom: 20px;
             font-size: 2.5em;
-            color: #333;
+            color: #2b623b; /* Heading color */
             font-family: 'Georgia', serif;
         }
 
@@ -35,7 +36,7 @@
             content: '';
             position: absolute;
             width: 4px; /* Reduzido para uma linha mais fina */
-            background: linear-gradient(to bottom, #f12929, #ff6f6f); /* Gradiente da linha */
+            background: linear-gradient(to bottom, #38a056, #2b623b); /* Gradiente da linha */
             top: 0;
             bottom: 0;
             left: 50%;
@@ -60,7 +61,7 @@
             position: absolute;
             width: 15px; /* Tamanho menor das bolinhas */
             height: 15px; /* Tamanho menor das bolinhas */
-            background-color: #f12929; /* Cor vermelha */
+            background-color: #38a056; /* Cor verde */
             border-radius: 50%;
             top: 15px;
             left: calc(50% - 7.5px); /* Centraliza as bolinhas horizontalmente */
@@ -81,14 +82,14 @@
             background-color: white;
             position: relative;
             border-radius: 6px;
-            border-left: 6px solid #f12929;
+            border-left: 6px solid #38a056; /* Cor da borda da linha do tempo */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .content h3 {
             margin-top: 0;
-            color: #f12929;
+            color: #38a056; /* Cor dos títulos na linha do tempo */
         }
 
         .content p {
@@ -101,17 +102,17 @@
 
         /* Modo Escuro */
         body.dark-mode {
-            background-color: #333;
-            color: #f9f1d8;
+            background-color: #2b623b;
+            color: #bcdfc6;
         }
 
         body.dark-mode h1 {
-            color: #f9f1d8;
+            color: #bcdfc6;
         }
 
         body.dark-mode .content {
             background-color: #444;
-            border-left-color: #f12929;
+            border-left-color: #38a056;
         }
 
         /* Botão para alternar tema */
@@ -119,8 +120,8 @@
             cursor: pointer;
             padding: 10px 20px;
             font-size: 18px;
-            color: #f9f1d8;
-            background-color: #f12929;
+            color: #bcdfc6;
+            background-color: #38a056;
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -129,7 +130,26 @@
         }
 
         .dark-mode-toggle:hover {
-            background-color: #e02b2b;
+            background-color: #2b623b;
+        }
+
+        /* Botão para voltar à Página Inicial */
+        .home-link {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            color: #bcdfc6;
+            background-color: #38a056;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-link:hover {
+            background-color: #2b623b;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
         @media screen and (max-width: 600px) {
@@ -204,11 +224,7 @@
     <button class="dark-mode-toggle" onclick="toggleDarkMode()">Modo Escuro</button>
 
     <!-- Botão para voltar à Página Inicial -->
-    <div style="text-align: center; margin: 20px 0;">
-        <a href="index.html" style="display: inline-block; padding: 10px 20px; font-size: 18px; color: white; background-color: #f12929; border: none; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;">
-            Página Inicial
-        </a>
-    </div>
+    <a href="index.html" class="home-link">Página Inicial</a>
 
     <script>
         function toggleDarkMode() {
