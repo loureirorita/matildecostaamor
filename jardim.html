@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('imagens/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Texto branco para contraste com a imagem de fundo */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 50px 0;
+            color: #fff; /* Cor do texto do título */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            text-align: center;
+            max-width: 300px;
+            flex: 1 1 calc(33.333% - 40px);
+            box-sizing: border-box;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais intensa para destacar as imagens */
+        }
+
+        .caption {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #ddd; /* Cor do texto da legenda */
+        }
+
+        .home-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #f12929;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .home-link:hover {
+            background-color: #d11a1a;
+        }
+    </style>
+</head>
+<body>
+    <h1>A Nossa Galeria de Fotos</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="primeirasflores.jpg" alt="Primeiras Flores">
+            <div class="caption">As primeiras flores (que a Ritinha recebeu) - 18 de dezembro de 2023</div>
+        </div>
+        <div class="gallery-item">
+            <img src="pordosol.jpg" alt="Pôr-do-Sol">
+            <div class="caption">Um pôr-do-sol inesquecível - 19 de janeiro de 2024</div>
+        </div>
+        <div class="gallery-item">
+            <img src="parque.jpg" alt="Parque">
+            <div class="caption">Tardezinha no nosso parque - 23 de março de 2024</div>
+        </div>
+        <div class="gallery-item">
+            <img src="nasa.jpg" alt="Foto da NASA">
+            <div class="caption">A foto da NASA no nosso dia - 4 de Abril de 2024</div>
+        </div>
+        <div class="gallery-item">
+            <img src="bee.jpg" alt="Bee">
+            <div class="caption">:O - 30 de Abril de 2024</div>
+        </div>
+        <div class="gallery-item">
+            <img src="baile.jpg" alt="Baile">
+            <div class="caption">Dia do baile - 12 de Junho de 2024</div>
+        </div>
+        <div class="gallery-item">
+            <img src="oopsie.jpg" alt="Oopsie">
+            <div class="caption">Oopsie - 5 de Julho de 2024</div>
+        </div>
+        <div class="gallery-item">
+            <img src="fotopraia.jpg" alt="Praia">
+            <div class="caption">Um dia bom na praia - 23 de Julho de 2024</div>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <a href="index.html" class="home-link">Página Inicial</a>
+    </div>
+</body>
+</html>
 
