@@ -7,15 +7,15 @@
     <style>
         /* Basic styling for the page */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #bcdfc6; /* Cor de fundo */
-            color: #2b623b; /* Cor do texto */
+            background-color: #f9f1d8;
+            color: #333;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -26,40 +26,39 @@
             max-width: 80%;
             transition: opacity 0.5s ease;
             padding: 20px;
-            background-color: #ffffff; /* Fundo branco para melhor contraste */
-            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px; /* Cantos arredondados */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-left: 6px solid #38a056; /* Cor de borda consistente com o esquema */
+            border: none; /* Remove a borda */
         }
 
         .btn, .home-link {
-            padding: 12px 24px;
+            padding: 0;
             font-size: 18px;
             color: white;
-            background-color: #38a056; /* Cor de fundo do botão */
+            background-color: #f12929; /* Cor de fundo do botão */
             border: none;
-            border-radius: 5px;
+            border-radius: 50%; /* Botão completamente arredondado */
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            text-decoration: none; /* Remove sublinhado dos links */
-            display: inline-block;
+            text-decoration: none; /* Remove sublinhado do link */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px; /* Largura fixa para botões redondos */
+            height: 100px; /* Altura fixa para botões redondos */
+            line-height: 100px; /* Ajusta a posição do texto verticalmente */
             text-align: center;
         }
 
         .btn:hover, .home-link:hover {
-            background-color: #2b623b; /* Cor de fundo ao passar o mouse */
+            background-color: #e02b2b; /* Cor ao passar o mouse */
             transform: scale(1.05);
         }
 
+        /* Button styling for home page link */
         .home-link {
-            font-size: 18px;
-            padding: 10px 20px;
-            background-color: #38a056; /* Cor de fundo do link */
-            text-decoration: none;
-        }
-
-        .home-link:hover {
-            background-color: #2b623b; /* Cor ao passar o mouse */
+            padding: 0;
         }
     </style>
 </head>
@@ -67,6 +66,7 @@
     <div class="sentence" id="sentenceDisplay">Clique no botão para ver uma frase aleatória!</div>
     <button class="btn" onclick="displayRandomSentence()">Clique em mim (;</button>
 
+    <!-- Button linking back to the home page -->
     <div style="text-align: center; margin: 20px 0;">
         <a href="index.html" class="home-link">Página Inicial</a>
     </div>
