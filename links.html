@@ -6,15 +6,18 @@
     <title>Links</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #bcdfc6; /* Background color */
             margin: 0;
             padding: 20px;
             text-align: center;
+            color: #2b623b; /* Text color */
         }
 
         h1 {
-            color: #333;
+            font-size: 2.5em;
+            color: #2b623b; /* Heading color */
+            margin-bottom: 30px;
         }
 
         .icons {
@@ -26,18 +29,37 @@
 
         .icon-link {
             text-decoration: none;
-            color: #333;
-            transition: transform 0.3s; /* Smooth animation on hover */
+            color: #2b623b; /* Text color for links */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth animations */
         }
 
         .icon-link img {
             width: 60px; /* Adjust the size of your icons */
             height: auto;
-            transition: transform 0.3s;
+            transition: transform 0.3s, filter 0.3s; /* Smooth animations */
         }
 
         .icon-link:hover img {
             transform: scale(1.1); /* Slightly enlarge the icon on hover */
+            filter: brightness(1.2); /* Increase brightness on hover */
+        }
+
+        .home-link {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 18px;
+            color: #ffffff; /* Text color for link */
+            background-color: #38a056; /* Button background color */
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(56, 160, 86, 0.2);
+            margin: 20px 0;
+        }
+
+        .home-link:hover {
+            background-color: #2b623b; /* Button hover background color */
+            box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
         }
     </style>
 </head>
@@ -51,21 +73,20 @@
         </a>
 
         <!-- Website Logo -->
-        <a href="https://loureirorita.github.io/matildecostaamor/" class="icon-link website" target="_blank">
+        <a href="https://loureirorita.github.io/matildecostaamor/" class="icon-link" target="_blank">
             <img src="web.png" alt="Website Logo">
         </a>
 
         <!-- Email Logo -->
-        <a href="mailto:matildeeritaparasempre@gmail.com" class="icon-link email">
+        <a href="mailto:matildeeritaparasempre@gmail.com" class="icon-link">
             <img src="envelope.png" alt="Email Logo">
         </a>
     </div>
-        <!-- Button linking back to the home page -->
+
+    <!-- Button linking back to the home page -->
     <div style="text-align: center; margin: 20px 0;">
         <a href="index.html" class="home-link">Página Inicial</a>
     </div>
 </body>
 </html>
 
-</body>
-</html>
