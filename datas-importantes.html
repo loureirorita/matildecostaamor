@@ -29,14 +29,14 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px 0;
-            border-left: 4px solid #38a056; /* Line for timeline */
+            border-left: 4px solid #38a056; /* Linha da linha do tempo */
         }
 
         .timeline::after {
             content: '';
             position: absolute;
-            width: 4px; /* Reduzido para uma linha mais fina */
-            background: linear-gradient(to bottom, #38a056, #2b623b); /* Gradiente da linha */
+            width: 4px;
+            background: linear-gradient(to bottom, #38a056, #2b623b);
             top: 0;
             bottom: 0;
             left: 50%;
@@ -44,38 +44,40 @@
         }
 
         .timeline-item {
-            padding: 10px 20px;
             position: relative;
-            background-color: inherit;
             width: 50%;
-            margin-bottom: 20px;
+            padding: 10px 20px;
+            box-sizing: border-box;
         }
 
         .timeline-item.left {
             left: 0;
+            text-align: right;
+            margin-right: 30px;
         }
 
         .timeline-item.right {
             left: 50%;
-            text-align: right;
+            text-align: left;
+            margin-left: 30px;
             transform: translateX(50%);
         }
 
         .timeline-item::after {
             content: '';
             position: absolute;
-            width: 15px; /* Tamanho menor das bolinhas */
-            height: 15px; /* Tamanho menor das bolinhas */
-            background-color: #38a056; /* Cor verde */
+            width: 15px;
+            height: 15px;
+            background-color: #38a056;
             border-radius: 50%;
             top: 20px;
-            left: -7.5px; /* Ajusta a bolinha à esquerda da linha para a esquerda */
+            left: -7.5px;
             z-index: 1;
         }
 
         .timeline-item.right::after {
             left: auto;
-            right: -7.5px; /* Ajusta a bolinha à direita da linha para a direita */
+            right: -7.5px;
         }
 
         .content {
@@ -83,24 +85,14 @@
             background-color: white;
             position: relative;
             border-radius: 6px;
-            border-left: 6px solid #38a056; /* Cor da borda da linha do tempo */
+            border-left: 6px solid #38a056;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, transform 0.3s ease;
-            margin-left: 30px; /* Alinha o conteúdo da linha do tempo */
-            margin-right: 30px; /* Alinha o conteúdo da linha do tempo */
-        }
-
-        .timeline-item.left .content {
-            margin-left: 0;
-        }
-
-        .timeline-item.right .content {
-            margin-right: 0;
         }
 
         .content h3 {
             margin-top: 0;
-            color: #38a056; /* Cor dos títulos na linha do tempo */
+            color: #38a056;
         }
 
         .content p {
@@ -109,7 +101,7 @@
 
         .timeline-item:hover .content {
             transform: scale(1.05);
-            background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+            background-color: #f1f1f1;
         }
 
         /* Modo Escuro */
@@ -154,8 +146,7 @@
             background-color: #38a056;
             text-decoration: none;
             border-radius: 25px;
-            transition
-            : background-color 0.3s ease;
+            transition: background-color 0.3s ease;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -179,10 +170,12 @@
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
+                text-align: left;
             }
 
             .timeline-item.left::after {
                 left: 60px;
+                right: auto;
             }
 
             .timeline-item.right::after {
