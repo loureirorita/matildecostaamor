@@ -14,7 +14,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f9f1d8 ;
+            background-color: #f9f1d8;
         }
 
         .sentence {
@@ -38,6 +38,23 @@
         .btn:hover {
             background-color: #f5d044;
         }
+
+        /* Button styling for home page link */
+        .home-link {
+            display: inline-block;
+            padding: 7px 15px;
+            font-size: 18px;
+            color: white;
+            background-color: #f12929;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: #f5d044;
+        }
     </style>
 </head>
 <body>
@@ -46,7 +63,7 @@
 
     <script>
         const sentences = [
-             "UAUUUUUUUUUUUUUUUUUUUUUUU",
+            "UAUUUUUUUUUUUUUUUUUUUUUUU",
             "Caso não te tenha dito hoje, tu és a minha pessoa e a minha pessoa favorita.",
             "Eu amo-te, com todo o meu coraçãozinho.",
             "O teu daily reminder para pores oléo nas pontas.",
@@ -54,12 +71,12 @@
             "Nunca deixes de sorrir, tens o sorriso mais lindo do mundo.",
             "És muito muito muito muitooo bonita.",
             "Sou muito grata por tudo aquilo que fazes por mim, pelos mimos, pela atenção, pelas pequenas coisas, pelos presentes, por tudo. Obrigada, mesmo.",
-            "Fazes-me sentir a menina menina mais única e especial do mundo.",
-            "A vidinha é melhor contigo."
-            "És o pensamento mais presente ao longo dos meus dias."
-            "Amar-te é tão fácil e ser amada por ti é um prazer."
-            "Fazes os meus dias."
-            "A minha barrinha da sorte definitivamente rebentou."
+            "Fazes-me sentir a menina mais única e especial do mundo.",
+            "A vidinha é melhor contigo.",
+            "És o pensamento mais presente ao longo dos meus dias.",
+            "Amar-te é tão fácil e ser amada por ti é um prazer.",
+            "Fazes os meus dias.",
+            "A minha barrinha da sorte definitivamente rebentou.",
             "A calma do teu olhar tranquiliza-me."
         ];
 
@@ -76,11 +93,10 @@
         window.onload = displayRandomSentence;
     </script>
 
-       <!-- Button HTML -->
-<div style="text-align: center; margin: 20px 0;">
-    <a href="index.html" style="display: inline-block; padding: 7px 15px; font-size: 18px; color: white; background-color: #f12929; border: none; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;">
-        Página Inicial
-            </a>
-</div>
+    <!-- Button linking back to the home page -->
+    <div style="text-align: center; margin: 20px 0;">
+        <a href="index.html" class="home-link">Página Inicial</a>
+    </div>
 </body>
 </html>
+
