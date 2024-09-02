@@ -32,42 +32,52 @@
             border: none; /* Remove a borda */
         }
 
-        .btn, .home-link {
-            padding: 0;
+        .btn {
+            padding: 10px 20px;
             font-size: 18px;
             color: white;
             background-color: #f12929; /* Cor de fundo do botão */
             border: none;
-            border-radius: 50%; /* Botão completamente arredondado */
+            border-radius: 50px; /* Botão arredondado */
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
             text-decoration: none; /* Remove sublinhado do link */
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 100px; /* Largura fixa para botões redondos */
-            height: 100px; /* Altura fixa para botões redondos */
-            line-height: 100px; /* Ajusta a posição do texto verticalmente */
-            text-align: center;
+            margin: 20px 0;
         }
 
-        .btn:hover, .home-link:hover {
+        .btn:hover {
             background-color: #e02b2b; /* Cor ao passar o mouse */
             transform: scale(1.05);
         }
 
         /* Button styling for home page link */
         .home-link {
-            padding: 0;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #f12929; /* Cor de fundo do botão */
+            border: none;
+            border-radius: 50px; /* Botão arredondado */
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .home-link:hover {
+            background-color: #e02b2b; /* Cor ao passar o mouse */
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
-    <div class="sentence" id="sentenceDisplay">Clique no botão para ver uma frase aleatória!</div>
+    <div class="sentence" id="sentenceDisplay">Clica no botão para ver uma frase aleatória!</div>
     <button class="btn" onclick="displayRandomSentence()">Clique em mim (;</button>
 
     <!-- Button linking back to the home page -->
-    <div style="text-align: center; margin: 20px 0;">
+    <div style="text-align: center;">
         <a href="index.html" class="home-link">Página Inicial</a>
     </div>
 
