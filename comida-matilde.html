@@ -24,6 +24,7 @@
         h2, h3 {
             color: #2b623b; /* Heading color */
             margin-bottom: 15px;
+            cursor: pointer;
         }
 
         h2 {
@@ -41,6 +42,11 @@
             margin: 20px auto;
             padding: 20px;
             max-width: 800px;
+        }
+
+        .section-content {
+            display: none; /* Hide content initially */
+            margin-top: 10px;
         }
 
         ul {
@@ -77,13 +83,6 @@
             background-color: #2b623b; /* Button hover background color */
             box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
         }
-
-        .section p {
-            margin: 0;
-            padding: 10px;
-            background-color: #f9f9f9; /* Paragraph background color */
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -95,173 +94,218 @@
     <h1>Comidas e Preferências</h1>
 
     <div class="section">
-        <h2>Coisas que a Matilde NÃO GOSTA</h2>
-        <ul>
-            <li>Cogumelos</li>
-            <li>Tomate</li>
-            <li>Pera</li>
-            <li>Delícias do mar</li>
-            <li>Pickles</li>
-            <li>Ketchup</li>
-            <li>Mortadela</li>
-            <li>Chocolate branco</li>
-            <li>Chocolate puro</li>
-            <li>Iogurtes de pedaços</li>
-            <li>Patês</li>
-            <li>Salada de fruta</li>
-            <li>Polvo</li>
-            <li>Coisas com creme (croissants, bolas de Berlim)</li>
-        </ul>
+        <h2 onclick="toggleContent(this)">Coisas que a Matilde NÃO GOSTA</h2>
+        <div class="section-content">
+            <ul>
+                <li>Cogumelos</li>
+                <li>Tomate</li>
+                <li>Pera</li>
+                <li>Delícias do mar</li>
+                <li>Pickles</li>
+                <li>Ketchup</li>
+                <li>Mortadela</li>
+                <li>Chocolate branco</li>
+                <li>Chocolate puro</li>
+                <li>Iogurtes de pedaços</li>
+                <li>Patês</li>
+                <li>Salada de fruta</li>
+                <li>Polvo</li>
+                <li>Coisas com creme (croissants, bolas de Berlim)</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h2>Comidas que a Matilde mais GOSTA</h2>
-        <ul>
-            <li>Massa > Arroz</li>
-            <li>Calamares</li>
-            <li>Panados e arroz de ervilhas</li>
-            <li>Torradas com manteiga</li>
-            <li>Carbonara</li>
-            <li>Massa com camarão</li>
-            <li>Francesinha</li>
-        </ul>
+        <h2 onclick="toggleContent(this)">Comidas que a Matilde mais GOSTA</h2>
+        <div class="section-content">
+            <ul>
+                <li>Massa > Arroz</li>
+                <li>Calamares</li>
+                <li>Panados e arroz de ervilhas</li>
+                <li>Torradas com manteiga</li>
+                <li>Carbonara</li>
+                <li>Massa com camarão</li>
+                <li>Francesinha</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>FRUTA que gosta:</h3>
-        <ul>
-            <li>Bananas verdes</li>
-            <li>Maçã verde</li>
-            <li>Tangerina</li>
-            <li>Melancia</li>
-            <li>Castanhas</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">FRUTA que gosta:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Bananas verdes</li>
+                <li>Maçã verde</li>
+                <li>Tangerina</li>
+                <li>Melancia</li>
+                <li>Castanhas</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>FRUTA que não gosta muito:</h3>
-        <ul>
-            <li>Laranja (prefere tangerina)</li>
-            <li>Pêssego</li>
-            <li>Coco</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">FRUTA que não gosta muito:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Laranja (prefere tangerina)</li>
+                <li>Pêssego</li>
+                <li>Coco</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>CHOCOLATE:</h3>
-        <ul>
-            <li>Snickers</li>
-            <li>M&M's</li>
-            <li>Twix</li>
-            <li>Maltesers</li>
-            <li>Kinder Joy</li>
-            <li>Ovo Kinder normal</li>
-            <li>Aqueles "rebuçados" de Kinder</li>
-            <li>Kinder Bueno branco</li>
-            <li>Kinder barrinhas</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">CHOCOLATE:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Snickers</li>
+                <li>M&M's</li>
+                <li>Twix</li>
+                <li>Maltesers</li>
+                <li>Kinder Joy</li>
+                <li>Ovo Kinder normal</li>
+                <li>Aqueles "rebuçados" de Kinder</li>
+                <li>Kinder Bueno branco</li>
+                <li>Kinder barrinhas</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>RANKING DE OVOS:</h3>
-        <ul>
-            <li>Estrelados</li>
-            <li>Mexidos</li>
-            <li>Omeletes</li>
-            <li>Escalfados</li>
-            <li>Cozidos</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">RANKING DE OVOS:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Estrelados</li>
+                <li>Mexidos</li>
+                <li>Omeletes</li>
+                <li>Escalfados</li>
+                <li>Cozidos</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>Ponto da CARNE:</h3>
-        <p>Bem passada</p>
+        <h3 onclick="toggleContent(this)">Ponto da CARNE:</h3>
+        <div class="section-content">
+            <p>Bem passada</p>
+        </div>
     </div>
 
     <div class="section">
-        <h3>Top BATATAS fritas:</h3>
-        <ul>
-            <li>Lays de forno (normais)</li>
-            <li>Pringles normais</li>
-            <li>Presunto</li>
-            <li>Cheetos bolinhas</li>
-            <li>Sunbites</li>
-            <li>Lisas</li>
-            <li>Doritos</li>
-            <li>Onduladas</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">Top BATATAS fritas:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Lays de forno (normais)</li>
+                <li>Pringles normais</li>
+                <li>Presunto</li>
+                <li>Cheetos bolinhas</li>
+                <li>Sunbites</li>
+                <li>Lisas</li>
+                <li>Doritos</li>
+                <li>Onduladas</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>BATATAS que não gosta:</h3>
-        <ul>
-            <li>Ketchup</li>
-            <li>Componesas “não adora”</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">BATATAS que não gosta:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Ketchup</li>
+                <li>Componesas “não adora”</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>Top GELADOS:</h3>
-        <ul>
-            <li>Limão/lima</li>
-            <li>Menta</li>
-            <li>Pistachio</li>
-            <li>Stracciatella</li>
-            <li>Chocolate</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">Top GELADOS:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Limão/lima</li>
+                <li>Menta</li>
+                <li>Pistachio</li>
+                <li>Stracciatella</li>
+                <li>Chocolate</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>GELADOS que não gosta:</h3>
-        <ul>
-            <li>Morango</li>
-            <li>Café</li>
-            <li>Marshmallow</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">GELADOS que não gosta:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Morango</li>
+                <li>Café</li>
+                <li>Marshmallow</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>Top bebidas:</h3>
-        <ul>
-            <li>Pleno de chá verde e limão</li>
-            <li>Água</li>
-            <li>Limonada</li>
-            <li>Coca cola</li>
-            <li>Ice tea de limão</li>
-            <li>Água das pedras de limão</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">Top bebidas:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Pleno de chá verde e limão</li>
+                <li>Água</li>
+                <li>Limonada</li>
+                <li>Coca cola</li>
+                <li>Ice tea de limão</li>
+                <li>Água das pedras de limão</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>Bebidas "ehh":</h3>
-        <ul>
-            <li>Fanta</li>
-            <li>Sprite</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">Bebidas "ehh":</h3>
+        <div class="section-content">
+            <ul>
+                <li>Fanta</li>
+                <li>Sprite</li>
+            </ul>
+        </div>
     </div>
 
     <div class="section">
-        <h3>ARROZ:</h3>
-        <p>Meio termo para bem cozido</p>
+        <h3 onclick="toggleContent(this)">ARROZ:</h3>
+        <div class="section-content">
+            <p>Meio termo para bem cozido</p>
+        </div>
     </div>
 
     <div class="section">
-        <h3>MASSA:</h3>
-        <p>Meio termo para bem cozida</p>
+        <h3 onclick="toggleContent(this)">MASSA:</h3>
+        <div class="section-content">
+            <p>Meio termo para bem cozida</p>
+        </div>
     </div>
 
     <div class="section">
-        <h3>Iogurtes:</h3>
-        <p>Iogurtes de misturar, os favoritos são com aquelas bolinhas crocantes com chocolate.</p>
+        <h3 onclick="toggleContent(this)">Iogurtes:</h3>
+        <div class="section-content">
+            <p>Iogurtes de misturar, os favoritos são com aquelas bolinhas crocantes com chocolate.</p>
+        </div>
     </div>
 
     <div class="section">
-        <h3>Pastelaria:</h3>
-        <ul>
-            <li>Croissants com chocolate</li>
-            <li>Bolas de Berlim sem creme ou chocolate (mas fica enjoativo)</li>
-        </ul>
+        <h3 onclick="toggleContent(this)">Pastelaria:</h3>
+        <div class="section-content">
+            <ul>
+                <li>Croissants com chocolate</li>
+                <li>Bolas de Berlim sem creme ou chocolate (mas fica enjoativo)</li>
+            </ul>
+        </div>
     </div>
+
+    <script>
+        function toggleContent(element) {
+            var content = element.nextElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
