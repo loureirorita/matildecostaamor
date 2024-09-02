@@ -14,7 +14,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: background-color 0.3s ease;
         }
 
         h1 {
@@ -30,6 +29,7 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px 0;
+            border-left: 4px solid #38a056; /* Line for timeline */
         }
 
         .timeline::after {
@@ -40,20 +40,25 @@
             top: 0;
             bottom: 0;
             left: 50%;
-            margin-left: -2px;
-            transition: background 0.3s ease;
+            transform: translateX(-50%);
         }
 
         .timeline-item {
-            padding: 10px 40px;
+            padding: 10px 20px;
             position: relative;
             background-color: inherit;
             width: 50%;
-            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
         }
 
-        .timeline-item:hover .content {
-            background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+            text-align: right;
+            transform: translateX(50%);
         }
 
         .timeline-item::after {
@@ -63,18 +68,14 @@
             height: 15px; /* Tamanho menor das bolinhas */
             background-color: #38a056; /* Cor verde */
             border-radius: 50%;
-            top: 15px;
-            left: calc(50% - 7.5px); /* Centraliza as bolinhas horizontalmente */
+            top: 20px;
+            left: -7.5px; /* Ajusta a bolinha à esquerda da linha para a esquerda */
             z-index: 1;
         }
 
-        .left {
-            left: 0;
-        }
-
-        .right {
-            left: 50%;
-            text-align: right;
+        .timeline-item.right::after {
+            left: auto;
+            right: -7.5px; /* Ajusta a bolinha à direita da linha para a direita */
         }
 
         .content {
@@ -85,6 +86,16 @@
             border-left: 6px solid #38a056; /* Cor da borda da linha do tempo */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-left: 30px; /* Alinha o conteúdo da linha do tempo */
+            margin-right: 30px; /* Alinha o conteúdo da linha do tempo */
+        }
+
+        .timeline-item.left .content {
+            margin-left: 0;
+        }
+
+        .timeline-item.right .content {
+            margin-right: 0;
         }
 
         .content h3 {
@@ -98,6 +109,7 @@
 
         .timeline-item:hover .content {
             transform: scale(1.05);
+            background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
         }
 
         /* Modo Escuro */
@@ -142,7 +154,8 @@
             background-color: #38a056;
             text-decoration: none;
             border-radius: 25px;
-            transition: background-color 0.3s ease;
+            transition
+            : background-color 0.3s ease;
             margin: 20px 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
