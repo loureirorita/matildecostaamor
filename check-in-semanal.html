@@ -7,25 +7,32 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f4f4f4, #e2e2e2);
+            color: #333;
         }
 
         h1 {
             text-align: center;
-            margin-top: 50px;
+            margin: 50px 0;
+            font-size: 2.5em;
+            color: #444;
         }
 
         p {
             max-width: 800px;
-            margin: 0 auto;
-            text-align: justify;
+            margin: 0 auto 30px auto;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.6;
         }
 
         ol {
             max-width: 800px;
             margin: 0 auto;
             padding-left: 20px;
+            font-size: 1.1em;
         }
 
         li {
@@ -35,26 +42,29 @@
         .btn {
             display: block;
             width: 100%;
-            padding: 10px;
-            font-size: 18px;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 12px;
+            font-size: 1.2em;
             color: white;
             background-color: #f12929;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             text-align: center;
             text-decoration: none;
         }
 
         .btn:hover {
             background-color: #d11a1a;
+            transform: scale(1.05);
         }
 
         .home-link {
             display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
+            padding: 12px 24px;
+            font-size: 1.2em;
             color: white;
             background-color: #f12929;
             text-decoration: none;
@@ -66,18 +76,28 @@
         .home-link:hover {
             background-color: #d11a1a;
         }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
-    <div style="text-align: center; margin: 20px 0;">
-        <a href="index.html" class="home-link">Página Inicial</a>
+    <div class="container">
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="index.html" class="home-link">Página Inicial</a>
+        </div>
+
+        <h1>Check In Semanal</h1>
+
+        <p>Olá amor, para o check-in semanal, por favor preenche o formulário no link abaixo:</p>
+        <a href="https://forms.gle/BM5X6pas4Hv7AR796" class="btn" target="_blank">Preencher Check In</a>
     </div>
-
-    <h1>Check In Semanal</h1>
-
-    <p>Olá amor, para o check-in semanal, por favor preenche o formulário no link abaixo:</p>
-    <a href="https://forms.gle/mbcy4G3ir7VUKUpw6" class="btn" target="_blank">Check In</a>
-
 </body>
 </html>
 
